@@ -11,7 +11,7 @@ export default function Navbar() {
     </>
     return (
         <div>
-            <div className="navbar bg-[#87CEEB]">
+            <div className="navbar bg-[#01CDD4] rounded-md">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -29,7 +29,7 @@ export default function Navbar() {
                     </ul>
                 </div>
                 <div className="navbar-end space-x-4">
-                    {user ? <div className="dropdown dropdown-end text-[#2F4F4F]">
+                    {user ? <div className="dropdown dropdown-end text-[#2F4F4F] z-10">
                         <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
                             <div className="w-10 rounded-full">
                                 <img alt="Tailwind CSS Navbar component" src={user?.photoURL} />
