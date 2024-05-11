@@ -1,44 +1,45 @@
 import { GoogleAuthProvider, createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut } from 'firebase/auth';
 import React, { createContext, useEffect, useState } from 'react'
 import auth from '../../firebase/firebase';
+import { BounceLoader } from 'react-spinners';
 export const authContext = createContext(null);
 
 const googleProvider = new GoogleAuthProvider();
 
-export default function AuthProvider({children}) {
+export default function AuthProvider({ children }) {
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(true);
 
-    const googleSignIn = () =>{
+    const googleSignIn = () => {
         return signInWithPopup(auth, googleProvider);
     }
 
-    const createUser = (email, password)=>{
-        return createUserWithEmailAndPassword(auth,email,password);
+    const createUser = (email, password) => {
+        return createUserWithEmailAndPassword(auth, email, password);
     }
 
-    const userSignIn = (email, password)=>{
+    const userSignIn = (email, password) => {
         return signInWithEmailAndPassword(auth, email, password)
     }
 
-    const logOut = ()=>{
+    const logOut = () => {
         setLoading(true);
         setUser(null);
         return signOut(auth);
     }
 
-    useEffect(()=>{
-        const unSubscribe = onAuthStateChanged(auth, (user)=>{
-            if(user){
+    useEffect(() => {
+        const unSubscribe = onAuthStateChanged(auth, (user) => {
+            if (user) {
                 setUser(user)
                 setLoading(false);
-            }else{
+            } else {
                 setUser(null)
                 setLoading(false);
             }
         });
-        return ()=> unSubscribe();
-    },[])
+        return () => unSubscribe();
+    }, [])
 
     const allData = {
         googleSignIn,
@@ -47,9 +48,23 @@ export default function AuthProvider({children}) {
         user,
         logOut,
     }
-  return (
-    <authContext.Provider  value={allData}>
-        {children}
-    </authContext.Provider>
-  )
+    return (
+        <authContext.Provider value={allData}>
+            {loading ? (
+                <div className='flex justify-center items-center h-[100vh]'>
+                    <BounceLoader
+
+                        loading={loading}
+                        color='#36D7B7'
+
+                        size={50}
+                        aria-label="Loading Spinner"
+                        data-testid="loader"
+                    />
+                </div>
+            ) : (
+                children
+            )}
+        </authContext.Provider>
+    )
 }

@@ -9,6 +9,7 @@ import AddPost from "../PrivateComponents/AddPost";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
 import ManagePost from "../PrivateComponents/ManagePost";
 import RequestPost from "../PrivateComponents/RequestPost";
+import VolunteerJobDetails from "../PrivateComponents/VolunteerJobDetails";
 
 export const router = createBrowserRouter([
     {
@@ -23,6 +24,13 @@ export const router = createBrowserRouter([
             {
                 path:'/needvolunteer',
                 element:<Need_Volunteer></Need_Volunteer>,
+            },
+            {
+                path:'/needvolunteer/:id',
+                element:<PrivateRoute>
+                    <VolunteerJobDetails></VolunteerJobDetails>
+                </PrivateRoute>,
+                loader:({params})=> fetch(`http://localhost:7000/volunteerneed/${params.id}`)
             },
             {
                 path:'/login',
