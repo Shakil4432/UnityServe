@@ -57,7 +57,8 @@ export const router = createBrowserRouter([
                 path:'/requestedpost',
                 element:<PrivateRoute>
                     <RequestPost></RequestPost>
-                </PrivateRoute>
+                </PrivateRoute>,
+                loader:()=>fetch('http://localhost:7000/requestedJob')
             },
             {
                 path:'/beavolunteer/:id',
