@@ -20,7 +20,7 @@ export default function AddPost() {
     const description = form.description.value;
     const location = form.location.value;
     const postTitle = form.postTitle.value;
-    const numOfVolunteer = form.numOfVolunteer.value;
+    const numOfVolunteersNeeded = form.numOfVolunteersNeeded.value;
     const category = form.category.value;
 
     const item= {name,
@@ -30,7 +30,7 @@ export default function AddPost() {
       description,
       location,
       postTitle,
-      numOfVolunteer,
+      numOfVolunteersNeeded,
       category
     }
 
@@ -95,7 +95,7 @@ export default function AddPost() {
             </div>
             <div>
               <label className="text-gray-700 dark:text-gray-200" > No. of volunteers needed  </label>
-              <input id="password" type="text" name='numOfVolunteer' placeholder='numOfVolunteer' className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring" />
+              <input id="password" type="text" name='numOfVolunteersNeeded' placeholder='numOfVolunteersNeeded' className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring" />
             </div>
             <div>
               <label className="text-gray-700 dark:text-gray-200" >Post Title </label>

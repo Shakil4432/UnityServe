@@ -21,7 +21,7 @@ export default function Navbar() {
                             {navLink}
                         </ul>
                     </div>
-                    <a className="btn btn-ghost text-xl text-[#2F4F4F]">daisyUI</a>
+                    <a className="btn btn-ghost text-xl text-[#2F4F4F]">UnityServe</a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1 space-x-4">
