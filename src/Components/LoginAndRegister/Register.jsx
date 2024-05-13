@@ -3,6 +3,7 @@ import { authContext } from '../AuthProvider/AuthProvider';
 import toast from 'react-hot-toast';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { updateProfile } from 'firebase/auth';
+import register from '../../assets/images/register.jpg'
 
 export default function Register() {
     const { createUser } = useContext(authContext);
@@ -47,10 +48,10 @@ export default function Register() {
 
     }
     return (
-        <div>
-            <div className="hero min-h-screen bg-base-200">
+        <div className='mt-16'>
+            <div className="hero min-h-screen bg-base-200 rounded-md">
                 <div className="hero-content flex-col lg:flex-row-reverse">
-                    <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+                    <div className="card shrink-0 w-full max-w-sm  bg-base-100">
                         <form onSubmit={handleSubmit} className="card-body">
                             <div className="form-control">
                                 <label className="label">
@@ -78,13 +79,16 @@ export default function Register() {
                                 </label>
                             </div>
                             <div className="form-control mt-6">
-                                <button className="btn btn-primary">Register</button>
+                                <button className="btn btn-primary bg-[#00DFC0] border-none">Register</button>
                             </div>
                             <div className="form-control mt-6">
                                 Already have an account?
                                 <Link to="/login" className='text-blue-400'>Login</Link>
                             </div>
                         </form>
+                    </div>
+                    <div className="text-center flex items-center  max-w-lg rounded-2xl  justify-center w-full  h-[60vh] lg:text-left">
+                       <img className='h-[94vh] rounded-2xl' src={register} alt="" />
                     </div>
                 </div>
             </div>

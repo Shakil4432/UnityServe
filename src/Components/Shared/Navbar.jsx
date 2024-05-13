@@ -4,14 +4,14 @@ import { authContext } from '../AuthProvider/AuthProvider'
 
 export default function Navbar() {
     const { user, logOut } = useContext(authContext);
-   
+
     const navLink = <>
         <li><NavLink to="/">Home</NavLink></li>
         <li><NavLink to="/needvolunteer">Need Volunteer</NavLink></li>
     </>
     return (
-        <div>
-            <div className="navbar bg-[#01CDD4] rounded-md">
+        <div className='mt-6'>
+            <div className="navbar border rounded-md shadow-sm">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -29,34 +29,37 @@ export default function Navbar() {
                     </ul>
                 </div>
                 <div className="navbar-end space-x-4">
-                    {user ? <div className="dropdown dropdown-end text-[#2F4F4F] z-10">
-                        <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
-                            <div className="w-10 rounded-full">
-                                <img alt="Tailwind CSS Navbar component" src={user?.photoURL} />
+
+                    {user ? <div className="tooltip" data-tip={user?.displayName || "Name Not Found"}>
+                        <div className="dropdown dropdown-end text-[#2F4F4F] z-10">
+                            <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
+                                <div className="w-10 rounded-full">
+                                    <img alt="Tailwind CSS Navbar component" src={user?.photoURL} />
+                                </div>
                             </div>
+                            <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 text-[#2F4F4F]">
+                                <li>
+                                    <Link to="/addvolunteerpost">
+                                        Add Post
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link to="/managepost">
+                                        Manage Post
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link to="/requestedpost">
+                                        Requested Post
+                                    </Link>
+                                </li>
+                                <li>
+                                    <button onClick={() => logOut()} className='btn btn-small'>
+                                        Logout
+                                    </button>
+                                </li>
+                            </ul>
                         </div>
-                        <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 text-[#2F4F4F]">
-                            <li>
-                                <Link to="/addvolunteerpost">
-                                    Add Post
-                                </Link>
-                            </li>
-                            <li>
-                                <Link to="/managepost">
-                                    Manage Post
-                                </Link>
-                            </li>
-                            <li>
-                                <Link to="/requestedpost">
-                                    Requested Post
-                                </Link>
-                            </li>
-                            <li>
-                                <button onClick={()=>logOut()} className='btn btn-small'>
-                                   Logout
-                                </button>
-                            </li>
-                        </ul>
                     </div> : <Link to='/login' className='btn btn-sm text-[#2F4F4F]'>Login</Link>}
                 </div>
             </div>

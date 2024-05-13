@@ -1,7 +1,8 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
-export default function ManagePostCard({ filterItem }) {
-    const { postTitle, location, email, thumbnail, category, deadline } = filterItem;
+export default function ManagePostCard({ filterItem, handleDelete }) {
+    const { _id, location, email, category, deadline } = filterItem;
 
     return (
         <div>
@@ -18,8 +19,8 @@ export default function ManagePostCard({ filterItem }) {
                             <td className=' w-72 text-center'>{deadline}</td>
                            <td className=' w-72 text-center'>
                             <div className='flex gap-3 justify-center items-center'>
-                            <button className='btn btn-sm btn-accent'>Update</button>
-                            <button className='btn btn-sm btn-error'>Delete</button>
+                            <Link to={`/updatepost/${_id}`}> <button className='btn btn-sm btn-accent'>Update</button></Link>
+                            <button onClick={()=>handleDelete(_id)} className='btn btn-sm btn-error'>Delete</button>
                             </div>
                            </td>
                         </tr>

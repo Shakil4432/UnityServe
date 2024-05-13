@@ -11,6 +11,7 @@ import ManagePost from "../PrivateComponents/ManagePost";
 import RequestPost from "../PrivateComponents/RequestPost";
 import VolunteerJobDetails from "../PrivateComponents/VolunteerJobDetails";
 import Be_A_Volunteer from "../PrivateComponents/Be_A_Volunteer";
+import UpdateMyPost from "../PrivateComponents/UpdateMyPost";
 
 export const router = createBrowserRouter([
     {
@@ -65,6 +66,13 @@ export const router = createBrowserRouter([
                 path:'/beavolunteer/:id',
                 element:<PrivateRoute>
                     <Be_A_Volunteer></Be_A_Volunteer>
+                </PrivateRoute>,
+                loader:({params})=>fetch(`${import.meta.env.VITE_API_URL}/volunteerneed/${params.id}`)
+            },
+            {
+                path:'/updatepost/:id',
+                element:<PrivateRoute>
+                    <UpdateMyPost></UpdateMyPost>
                 </PrivateRoute>,
                 loader:({params})=>fetch(`${import.meta.env.VITE_API_URL}/volunteerneed/${params.id}`)
             }

@@ -35,7 +35,7 @@ export default function Banner() {
                     </section>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <section className="p-6 bg-[#FFFFFF] rounded-md">
+                    <section className="p-6 bg-lime-50 rounded-md">
                         <div className="container grid gap-6 mx-auto text-center lg:grid-cols-2 xl:grid-cols-5">
                             <div className="w-full px-6 py-16 rounded-md sm:px-12 md:px-16 xl:col-span-2 ">
 
