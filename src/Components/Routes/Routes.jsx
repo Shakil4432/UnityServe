@@ -51,7 +51,8 @@ export const router = createBrowserRouter([
                 path:'/managepost',
                 element:<PrivateRoute>
                     <ManagePost></ManagePost>
-                </PrivateRoute>
+                </PrivateRoute>,
+                loader:()=>fetch(`${import.meta.env.VITE_API_URL}/volunteerneed`),
             },
             {
                 path:'/requestedpost',
