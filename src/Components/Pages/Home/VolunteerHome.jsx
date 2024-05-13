@@ -5,7 +5,7 @@ export default function VolunteerHome() {
     const [needPurposes2, setNeedPurposes2] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:7000/volunteerneed')
+        fetch(`${import.meta.env.VITE_API_URL}/volunteerneed`)
             .then(res => res.json())
             .then(data => setNeedPurposes2(data))
     }, [])

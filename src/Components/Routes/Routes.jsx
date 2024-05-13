@@ -31,7 +31,7 @@ export const router = createBrowserRouter([
                 element:<PrivateRoute>
                     <VolunteerJobDetails></VolunteerJobDetails>
                 </PrivateRoute>,
-                loader:({params})=> fetch(`http://localhost:7000/volunteerneed/${params.id}`)
+                loader:({params})=> fetch(`${import.meta.env.VITE_API_URL}/volunteerneed/${params.id}`)
             },
             {
                 path:'/login',
@@ -58,14 +58,14 @@ export const router = createBrowserRouter([
                 element:<PrivateRoute>
                     <RequestPost></RequestPost>
                 </PrivateRoute>,
-                loader:()=>fetch('http://localhost:7000/requestedJob')
+                loader:()=>fetch(`${import.meta.env.VITE_API_URL}/requestedJob`)
             },
             {
                 path:'/beavolunteer/:id',
                 element:<PrivateRoute>
                     <Be_A_Volunteer></Be_A_Volunteer>
                 </PrivateRoute>,
-                loader:({params})=>fetch(`http://localhost:7000/volunteerneed/${params.id}`)
+                loader:({params})=>fetch(`${import.meta.env.VITE_API_URL}/volunteerneed/${params.id}`)
             }
 
         ]

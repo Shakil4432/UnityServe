@@ -34,7 +34,7 @@ export default function AddPost() {
       category
     }
 
-    fetch('http://localhost:7000/volunteerneed', {
+    fetch(`${import.meta.env.VITE_API_URL}/volunteerneed`, {
       method:"POST",
       headers:{
         "content-type":"application/json",

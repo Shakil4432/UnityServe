@@ -49,7 +49,7 @@ export default function Be_A_Volunteer() {
             status
         }
 
-        fetch('http://localhost:7000/requestedJob', {
+        fetch(`${import.meta.env.VITE_API_URL}/requestedJob`, {
             method: "POST",
             headers: {
                 "content-type": "application/json",
