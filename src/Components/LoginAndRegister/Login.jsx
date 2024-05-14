@@ -40,10 +40,10 @@ export default function Login() {
     }
 
     return (
-        <div className='mt-16'>
+        <div className='lg:mt-16'>
             <div className="hero min-h-screen bg-base-200 rounded-md">
                 <div className="hero-content flex-col lg:flex-row-reverse ">
-                    <div className="text-center flex items-center  max-w-lg rounded-2xl  justify-center w-full  h-[60vh] lg:text-left">
+                    <div className="text-center lg:flex hidden items-center  max-w-lg rounded-2xl  justify-center w-full  h-[60vh] lg:text-left">
                         <img className='h-[83vh] rounded-2xl' src={login} alt="" />
                     </div>
                     <div className="card shrink-0 w-full max-w-sm  bg-base-100">

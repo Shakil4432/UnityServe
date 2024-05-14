@@ -54,7 +54,7 @@ export default function RequestPost() {
 
 
   return (
-    <div className='grid grid-cols-2 gap-4 mt-16'>
+    <div className='grid grid-cols-1 lg:grid-cols-2 gap-4 mt-6 lg:mt-16'>
 
       {
         items.map(item => <RequestPostCard key={item._id} item={item} handleDelete={handleDelete}></RequestPostCard>)

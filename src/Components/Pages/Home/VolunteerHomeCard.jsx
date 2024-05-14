@@ -5,7 +5,7 @@ export default function VolunteerHomeCard({ needPurpose2 }) {
   const { _id, category, deadline, postTitle, thumbnail } = needPurpose2;
   return (
     <div>
-      <div className="w-full border  relative  h-[60vh] overflow-hidden bg-white rounded-lg shadow-lg dark:bg-gray-800">
+      <div className="w-full border  relative h-[44vh] lg:h-[60vh] overflow-hidden bg-white rounded-lg shadow-lg dark:bg-gray-800">
         <img className="object-cover w-full h-48" src={thumbnail} alt="avatar" />
         <div className="py-2 text-center">
           <a href="#" className="block text-xl font-bold text-gray-800 dark:text-white" tabindex="0" role="link"> {postTitle}</a>

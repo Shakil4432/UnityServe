@@ -87,7 +87,7 @@ export default function Register() {
                             </div>
                         </form>
                     </div>
-                    <div className="text-center flex items-center  max-w-lg rounded-2xl  justify-center w-full  h-[60vh] lg:text-left">
+                    <div className="text-center  hidden lg:flex  items-center  max-w-lg rounded-2xl  justify-center w-full  h-[60vh] lg:text-left">
                        <img className='h-[94vh] rounded-2xl' src={register} alt="" />
                     </div>
                 </div>
