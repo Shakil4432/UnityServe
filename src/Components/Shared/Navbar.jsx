@@ -4,7 +4,7 @@ import { authContext } from '../AuthProvider/AuthProvider'
 
 export default function Navbar() {
     const { user, logOut } = useContext(authContext);
-    const [theme, setTheme] = useState('light');
+    const [theme, setTheme] = useState(() => localStorage.getItem('theme') || 'light');
 
     const handleToggle = (e)=>{
         if(e.target.checked){

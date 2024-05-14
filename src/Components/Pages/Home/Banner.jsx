@@ -28,7 +28,7 @@ export default function Banner() {
                                         Should you require further information or support, please don’t hesitate to contact me.
                                         Wishing you a great day ahead!</span>
                                 </p>
-                                <button className='btn btn-outline'>View Details</button>
+                                <button className='btn btn-outline dark:text-blue-400'>View Details</button>
                             </div>
                             <img src="https://i.ibb.co/KNsHR9F/2942054-408406-PDZ1-KL-914.jpg" className="object-cover w-full h-[70vh] rounded-md xl:col-span-3 bg-gray-500" />
                         </div>
@@ -43,7 +43,7 @@ export default function Banner() {
                                 <p className="my-4">
                                     <span className="font-medium ">"Discover a wide range of volunteer opportunities tailored to your interests, skills, and availability. </span>
                                 </p>
-                                <button className='btn btn-outline'>View Details</button>
+                                <button className='btn btn-outline dark:text-blue-400'>View Details</button>
 
                             </div>
                             <img src="https://i.ibb.co/XL2DG9X/7788663-3735515.jpg" alt="" className="object-cover w-full h-[70vh] rounded-md xl:col-span-3 bg-gray-500" />
@@ -59,7 +59,7 @@ export default function Banner() {
                                 <p className="my-4">
                                     <span className="font-medium ">Experience the power of volunteerism firsthand and witness the positive impact you can make in your community and beyond. </span>
                                 </p>
-                                <button className='btn btn-outline'>View Details</button>
+                                <button className='btn btn-outline dark:text-white'>View Details</button>
 
                             </div>
                             <img src="https://i.ibb.co/RyT165T/2546573-356309-PAXG83-360.jpg" alt="" className="object-cover w-full h-[70vh] rounded-md xl:col-span-3 bg-gray-500" />
@@ -74,7 +74,7 @@ export default function Banner() {
                                 <p className="my-4">
                                     <span className="font-medium ">Become part of a passionate community dedicated to making a difference in the world. By joining our mission.</span>
                                 </p>
-                                <button className='btn btn-outline'>View Details</button>
+                                <button className='btn btn-outline dark:text-white'>View Details</button>
                             </div>
                             <img src="https://i.ibb.co/QQQxNTY/1853167-253000-P4-NDBU-283.jpg" alt="" className="object-cover w-full h-[70vh] rounded-md xl:col-span-3 bg-gray-500" />
                         </div>
