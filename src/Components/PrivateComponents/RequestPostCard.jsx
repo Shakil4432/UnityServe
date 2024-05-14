@@ -18,8 +18,10 @@ export default function RequestPostCard({ item, handleDelete }) {
 
                 <div className="flex items-center justify-between mt-4">
                     <a href="#" className="text-sky-400 dark:text-blue-400 hover:underline" tabindex="0" role="link">{location}</a>
-                    <button className='btn btn-sm bg-sky-400 text-white font-bold'>{status}</button>
-                    <button onClick={() => handleDelete(_id)} className="px-3 btn btn-sm py-1 text-sm font-bold text-gray-100 transition-colors duration-300 transform bg-red-400 rounded cursor-pointer hover:bg-red-600" tabindex="0" role="button">Cancel</button>
+                    <div className='flex justify-center items-center gap-4'>
+                        <button className='btn btn-sm bg-sky-400 text-white font-bold'>{status}</button>
+                        <button onClick={() => handleDelete(_id)} className="px-3 btn btn-sm py-1 text-sm font-bold text-gray-100 transition-colors duration-300 transform bg-red-400 rounded cursor-pointer hover:bg-red-600" tabindex="0" role="button">Cancel</button>
+                    </div>
                 </div>
             </div>
         </div>

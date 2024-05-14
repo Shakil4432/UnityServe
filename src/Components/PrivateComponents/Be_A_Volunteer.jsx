@@ -73,6 +73,7 @@ export default function Be_A_Volunteer() {
     return (
 
         <div className='mt-16'>
+            <h1 className='text-3xl font-bold text-center  p-5 rounded-m bg-blue-100 mb-4 max-w-4xl mx-auto shadow-md'>Job Request Form</h1>
             <section className="max-w-4xl p-6 mx-auto bg-white rounded-md shadow-md dark:bg-gray-800">
                 <form onSubmit={handleSubmit}>
                     <div className="grid grid-cols-1 gap-6 mt-4 sm:grid-cols-2">

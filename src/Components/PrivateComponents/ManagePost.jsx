@@ -43,7 +43,7 @@ export default function ManagePost() {
   }
 
   return (
-    <div className='border p-4 mt-16'>
+    <div className='border p-4 mt-16 dark:bg-gray-900'>
       <div className='overflow-x-auto'>
         <table className='table'>
           <thead className='text-center '>

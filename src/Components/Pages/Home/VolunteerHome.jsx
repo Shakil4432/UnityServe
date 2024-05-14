@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import VolunteerHomeCard from './VolunteerHomeCard';
+import { Link } from 'react-router-dom';
 
 export default function VolunteerHome() {
     const [needPurposes2, setNeedPurposes2] = useState([]);
@@ -16,6 +17,10 @@ export default function VolunteerHome() {
         {
             needPurposes2.slice(0,6).map(needPurpose2 => <VolunteerHomeCard key={needPurpose2._id} needPurpose2={needPurpose2}></VolunteerHomeCard>)
         }
+    </div>
+
+    <div className='flex items-center justify-center'>
+    <Link to='/needvolunteer' className='mt-6 text-center'> <button className='btn btn-accent'>See All</button> </Link>
     </div>
 </div>
   )
