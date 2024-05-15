@@ -5,6 +5,9 @@ import { RouterProvider } from 'react-router-dom'
 import { router } from './Components/Routes/Routes.jsx'
 import AuthProvider from './Components/AuthProvider/AuthProvider.jsx'
 import { Toaster } from 'react-hot-toast'
+import axios from 'axios'
+
+axios.defaults.withCredentials=true;
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>

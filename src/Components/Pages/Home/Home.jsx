@@ -2,6 +2,7 @@ import React from 'react'
 import VolunteerHome from './VolunteerHome'
 import Banner from './Banner'
 import Archivements from './Archivements'
+import Volunteers from './Volunteers'
 
 
 export default function Home() {
@@ -10,6 +11,7 @@ export default function Home() {
       <Banner></Banner>
        <VolunteerHome></VolunteerHome>
        <Archivements></Archivements>
+       <Volunteers></Volunteers>
     </div>
   )
 }

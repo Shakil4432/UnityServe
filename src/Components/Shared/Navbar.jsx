@@ -34,7 +34,7 @@ export default function Navbar() {
     </>
     return (
         <div className='mt-6'>
-            <div className="navbar border rounded-md shadow-sm dark:bg-gray-900">
+            <div className="navbar border rounded-t-md shadow-sm dark:bg-gray-900">
                 <div className="navbar-start">
                     <div className="dropdown z-10">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">

@@ -2,6 +2,7 @@ import React, { useContext } from 'react'
 import { authContext } from '../AuthProvider/AuthProvider'
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import login from '../../assets/images/login.jpg'
+import toast from 'react-hot-toast';
 
 export default function Login() {
     const { googleSignIn, userSignIn } = useContext(authContext);
@@ -20,10 +21,11 @@ export default function Login() {
             .then(result => {
                 if (result.user) {
                     navigate(from);
+                    toast.success('Signin Successfull');
                 }
             })
             .catch(error => {
-                console.log(error.message)
+                toast.error(error.message);
             })
     }
 
@@ -31,11 +33,13 @@ export default function Login() {
         handleProvider()
             .then(result => {
                 if (result.user) {
+                    toast.success('Signin Successfull');
                     navigate(from);
                 }
             })
             .catch(error => {
                 console.log(error.message)
+                toast.error(error.message);
             })
     }
 
@@ -52,13 +56,13 @@ export default function Login() {
                                 <label className="label">
                                     <span className="label-text">Email</span>
                                 </label>
-                                <input type="email" placeholder="email" className="input input-bordered" required />
+                                <input type="email" placeholder="email" name='email' className="input input-bordered" required />
                             </div>
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Password</span>
                                 </label>
-                                <input type="password" placeholder="password" className="input input-bordered" required />
+                                <input type="password" placeholder="password" name='password' className="input input-bordered" required />
                                 <label className="label">
                                     <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                                 </label>

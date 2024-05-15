@@ -19,7 +19,7 @@ export default function Banner() {
                 modules={[Autoplay, Pagination, Navigation]}
                 className="mySwiper">
                 <SwiperSlide>
-                    <section className="p-6 dark:text-blue-400 bg-gray-50 rounded-md">
+                    <section className="p-6 dark:text-blue-400 bg-gray-50 rounded-b-md">
                         <div className=" grid gap-6 mx-auto text-center lg:grid-cols-2 xl:grid-cols-5">
                             <div className="w-full sm:space-y-2 lg:px-6 lg:py-16 rounded-md sm:px-12 md:px-16 xl:col-span-2 ">
                                 <h1 className="text-2xl lg:text-4xl font-extrabold">Welcome</h1>
@@ -35,7 +35,7 @@ export default function Banner() {
                     </section>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <section className="p-6 dark:text-blue-400 bg-lime-50 rounded-md">
+                    <section className="p-6 dark:text-blue-400 bg-lime-50 rounded-b-md">
                         <div className="container grid gap-6 mx-auto text-center lg:grid-cols-2 xl:grid-cols-5">
                             <div className="w-full sm:space-y-2 lg:px-6 lg:py-16 rounded-md sm:px-12 md:px-16 xl:col-span-2 ">
 
@@ -51,7 +51,7 @@ export default function Banner() {
                     </section>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <section className="p-6 dark:text-gray-100 bg-[#01CDD4] rounded-md">
+                    <section className="p-6 dark:text-gray-100 bg-[#01CDD4] rounded-b-md">
                         <div className="container grid gap-6 mx-auto text-center lg:grid-cols-2 xl:grid-cols-5">
                             <div className="w-full sm:space-y-2 lg:px-6 lg:py-16 rounded-md sm:px-12 md:px-16 xl:col-span-2 ">
 
@@ -67,7 +67,7 @@ export default function Banner() {
                     </section>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <section className="p-6 dark:text-gray-100 bg-[#27A8E1] rounded-md">
+                    <section className="p-6 dark:text-gray-100 bg-[#27A8E1] rounded-b-md">
                         <div className="container grid gap-6 mx-auto text-center lg:grid-cols-2 xl:grid-cols-5">
                             <div className="w-full sm:space-y-2 lg:px-6 lg:py-16 rounded-md sm:px-12 md:px-16 xl:col-span-2 ">
                                 <h1 className="text-2xl lg:text-4xl font-extrabold">Join Our Mission to Make a Difference</h1>
