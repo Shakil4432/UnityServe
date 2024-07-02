@@ -24,7 +24,7 @@ A user-friendly platform for volunteer management where users can create, manage
 - **Frontend:**
   - ![React](https://img.shields.io/badge/-React-blue?logo=react&logoColor=white&style=flat)
   - ![Tailwind CSS](https://img.shields.io/badge/-Tailwind_CSS-38B2AC?logo=tailwind-css&logoColor=white&style=flat)
-  - ![Redux](https://img.shields.io/badge/-Redux-764ABC?logo=redux&logoColor=white&style=flat) (optional)
+ 
 
 - **Backend:**
   - ![Node.js](https://img.shields.io/badge/-Node.js-339933?logo=node.js&logoColor=white&style=flat)
