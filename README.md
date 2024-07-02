@@ -19,3 +19,9 @@ A user-friendly platform for volunteer management where users can create, manage
 - **Search Functionality:** Search posts by title on the Need Volunteer Page.
 - **Error Handling:** Toast notifications for error and success messages.
   
+## Setup Instructions
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/your-username/your-repository.git
+   cd your-repository
