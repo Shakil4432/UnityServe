@@ -18,4 +18,4 @@ A user-friendly platform for volunteer management where users can create, manage
 - **CRUD Operations:** Create, read, update, and delete volunteer posts and volunteer requests.
 - **Search Functionality:** Search posts by title on the Need Volunteer Page.
 - **Error Handling:** Toast notifications for error and success messages.
-- **JWT Authentication:** Token-based authentication for private routes.
+  
