@@ -43,7 +43,7 @@ A user-friendly platform for volunteer management where users can create, manage
    cd your-repository
    npm install
 
-## Setup Environment Variable
+## Setup Environment Variable and Run 
 1.Create a .env file in the root directory.
 Add environment variables for Firebase and MongoDB credentials.
 2.REACT_APP_FIREBASE_API_KEY=your-firebase-api-key
